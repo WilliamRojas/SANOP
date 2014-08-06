@@ -1,0 +1,82 @@
+<%= form_for(@riesgo) do |f| %>
+  <% if @riesgo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@riesgo.errors.count, "error") %> prohibited this riesgo from being saved:</h2>
+
+      <ul>
+      <% @riesgo.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :empresa %><br>
+    <%= f.text_field :empresa %>
+  </div>
+  <div class="field">
+    funcionarios <br>
+    <%= f.collection_select :funcionario_id, Funcionario.all, :id, :nombres, class: "form-control", prompt:
+    "Seleccione Funcionario" %>
+  </div>
+  <div class="field">
+    <%= f.label :fecha %><br>
+    <%= f.date_select :fecha %>
+  </div>
+  <div class="field">
+    <%= f.label :area_de_seccion_o_puesto_de_trabajo %><br>
+    <%= f.text_field :areadeseccionopuestodetrabajo %>
+  </div>
+  <div class="field">
+    <%= f.label :clase_de_riesgo %><br>
+    <%= f.text_field :clasederiesgo %>
+  </div>
+  <div class="field">
+    <%= f.label :factor_de_riesgo %><br>
+    <%= f.text_field :factorderiesgo %>
+  </div>
+  <div class="field">
+    <%= f.label :fuente_generadora %><br>
+    <%= f.text_field :fuentegeneradora %>
+  </div>
+  <div class="field">
+    <%= f.label :efecto_conocido %><br>
+    <%= f.text_field :efectoconocido %>
+  </div>
+  <div class="field">
+    <%= f.label :numero_de_expuestos %><br>
+    <%= f.text_field :numerodeexpuestos %>
+  </div>
+  <div class="field">
+    <%= f.label :tiempo %><br>
+    <%= f.text_field :tiempo %>
+  </div>
+  <div class="field">
+    <%= f.label :controles_exitentes %><br>
+    <%= f.text_field :controlesexitentes %>
+  </div>
+  <div class="field">
+    <%= f.label :controles_recomendados %><br>
+    <%= f.text_field :controlesrecomendados %>
+  </div>
+  <div class="field">
+    <%= f.label :consecuencia %><br>
+    <%= f.text_field :consecuencia %>
+  </div>
+  <div class="field">
+    <%= f.label :exposicion %><br>
+    <%= f.text_field :exposicion %>
+  </div>
+  <div class="field">
+    <%= f.label :factor_de_ponderacion %><br>
+    <%= f.text_field :factordeponderacion %>
+  </div>
+  <div class="field">
+    <%= f.label :repercucion_del_riesgo %><br>
+    <%= f.text_field :repercuciondelriesgo %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Guardar" %>
+  </div>
+<% end %>

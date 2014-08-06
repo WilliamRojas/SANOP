@@ -1,0 +1,41 @@
+<br><br><br><br><br><br>
+
+<h1>Lista incapacidads</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Funcionario</th>
+      <th>Fecha inicio</th>
+      <th>Fecha terminacion</th>
+      <th>Total dias</th>
+      <th>Dias acobrar</th>
+      <th>Prorroga</th>
+      <th>Numero inpacacidad</th>
+      <th>Origen de la incapacidad</th>
+      <th colspan="3">acciones</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @incapacidads.each do |incapacidad| %>
+      <tr>
+        <td><%= incapacidad.funcionario.nombres rescue nil %></td>
+        <td><%= incapacidad.fechainicio %></td>
+        <td><%= incapacidad.fechaterminacion %></td>
+        <td><%= incapacidad.totaldias %></td>
+        <td><%= incapacidad.diasacobrar %></td>
+        <td><%= incapacidad.prorroga %></td>
+        <td><%= incapacidad.numeroinpacacidad %></td>
+        <td><%= incapacidad.origendelaincapacidad %></td>
+        <td><%= link_to 'Ver', incapacidad %></td>
+        <td><%= link_to 'Editar', edit_incapacidad_path(incapacidad) %></td>
+        <td><%= link_to 'Eliminar', incapacidad, method: :delete, data: { confirm: 'Está seguro que desea eliminar el registro?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Nueva Incapacidad', new_incapacidad_path %>

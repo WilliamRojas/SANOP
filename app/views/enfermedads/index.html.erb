@@ -1,0 +1,34 @@
+<br><br><br><br><br><br>
+<h1>Lista enfermedads</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Funcionario</th>
+       <th>descripcion</th>
+       <th>fecha</th>
+      <th>Codigo de diagnostico</th>
+      <th colspan="3">acciones</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @enfermedads.each do |enfermedad| %>
+      <tr>
+        
+        <td><%= enfermedad.funcionario.nombres rescue nil %></td>
+        <td><%= enfermedad.descripcion %></td>
+        <td><%= enfermedad.fecha %></td>
+        <td><%= enfermedad.codigodediagnostico %></td>
+        <td><%= link_to 'Ver', enfermedad %></td>
+        <td><%= link_to 'Editar', edit_enfermedad_path(enfermedad) %></td>
+        <td><%= link_to 'Eliminar', enfermedad, method: :delete, data: { confirm: 'está seguro que desea eliminar el registro?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+<br>
+
+<%= link_to 'Nuevo enfermedad', new_enfermedad_path %>

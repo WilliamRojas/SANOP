@@ -1,0 +1,91 @@
+<%= form_for(@incidente) do |f| %>
+  <% if @incidente.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@incidente.errors.count, "error") %> prohibited this incidente from being saved:</h2>
+
+      <ul>
+      <% @incidente.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<h5>SISTEMA INTEGRADO DE GESTIÓN REPORTE INCIDENTE LABORALES</h5>
+  <div class="field">
+    funcionarios <br>
+    <%= f.collection_select :funcionario_id, Funcionario.all, :id, :nombres, class: "form-control", prompt:
+    "Seleccione Funcionario" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :area_o_proceso %><br>
+    <%= f.text_field :area_o_proceso %>
+  </div>
+  <div class="field">
+  lugar de ocurrencia<br>
+  dentro de la entidad: <%= f.radio_button(:lugar_de_ocurrencia, true) %>
+  fuera de la entidad: <%= f.radio_button(:lugar_de_ocurrencia, false) %>
+</div>
+  <div class="field">
+    <%= f.label :fecha_del_reporte %><br>
+    <%= f.date_select :fecha_del_reporte %>
+  </div>
+  <div class="field">
+    <%= f.label :hora_del_reporte %><br>
+    <%= f.text_field :hora_del_reporte %>
+  </div>
+  <h5>PERSONAL INVOLUCRADO</h5>
+  <div class="field">
+    personal  <br>
+    <%= f.collection_select :personalinvolucrado_id, Personalinvolucrado.all, :id, :nombre, class: "form-control", prompt:
+    "Seleccione personal" %>
+  </div> 
+  <div class="field">
+    <%= f.label :otro %><br>
+    <%= f.text_field :otro %>
+  </div>
+  <div class="field">
+    <%= f.label :especifique %><br>
+    <%= f.text_field :especifique %>
+  </div>
+  <div class="field">
+    <%= f.label :nombre_completo1 %><br>
+    <%= f.text_field :nombre_completo1 %>
+  </div>
+  <div class="field">
+    <%= f.label :email1 %><br>
+    <%= f.text_field :email1 %>
+  </div>
+  <div class="field">
+    <%= f.label :telefono1 %><br>
+    <%= f.text_field :telefono1 %>
+  </div>
+  <div class="field">
+    <%= f.label :nombre_completo2 %><br>
+    <%= f.text_field :nombre_completo2 %>
+  </div>
+  <div class="field">
+    <%= f.label :email2 %><br>
+    <%= f.text_field :email2 %>
+  </div>
+  <div class="field">
+    <%= f.label :telefono2 %><br>
+    <%= f.text_field :telefono2 %>
+  </div>
+  <div class="field">
+    <%= f.label :descripcion_del_evento %><br>
+    <%= f.text_field :descripcion_del_evento %>
+  </div>
+  <div class="field">
+    <%= f.label :nombre_del_dilenciador %><br>
+    <%= f.text_field :nombre_del_dilenciador %>
+  </div>
+  <div class="field">
+    <%= f.label :nombre_de_lider_de_informe %><br>
+    <%= f.text_field :nombre_de_lider_de_informe %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Guardar" %>
+  </div>
+<% end %>

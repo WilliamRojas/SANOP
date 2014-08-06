@@ -1,0 +1,58 @@
+<br><br><br><br><br><br>
+<h1>Lista incidentes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Funcionario</th>
+      <th>Area o proceso</th>
+      <th>Lugar de ocurrencia</th>
+      <th>Fecha del reporte</th>
+      <th>Hora del reporte</th>
+      <th>Personalinvolucrado</th>
+      <th>Otro</th>
+      <th>Especifique</th>
+      <th>Nombre completo1</th>
+      <th>Email1</th>
+      <th>Telefono1</th>
+      <th>Nombre completo2</th>
+      <th>Email2</th>
+      <th>Telefono2</th>
+      <th>Descripcion del evento</th>
+      <th>Nombre del dilenciador</th>
+      <th>Nombre de lider de informe</th>
+      <th colspan="3">Acciones</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @incidentes.each do |incidente| %>
+      <tr>
+        <td><%= incidente.funcionario.nombres rescue nil %></td>
+        <td><%= incidente.area_o_proceso %></td>
+        <td><%= mostrar_lugar_de_ocurrencia(incidente.lugar_de_ocurrencia)%></td>
+        <td><%= incidente.fecha_del_reporte %></td>
+        <td><%= incidente.hora_del_reporte %></td>
+        <td><%= incidente.personalinvolucrado.nombre rescue nil %></td>
+        <td><%= incidente.otro %></td>
+        <td><%= incidente.especifique %></td>
+        <td><%= incidente.nombre_completo1 %></td>
+        <td><%= incidente.email1 %></td>
+        <td><%= incidente.telefono1 %></td>
+        <td><%= incidente.nombre_completo2 %></td>
+        <td><%= incidente.email2 %></td>
+        <td><%= incidente.telefono2 %></td>
+        <td><%= incidente.descripcion_del_evento %></td>
+        <td><%= incidente.nombre_del_dilenciador %></td>
+        <td><%= incidente.nombre_de_lider_de_informe %></td>
+        <td><%= link_to 'Ver', incidente %></td>
+        <td><%= link_to 'Editar', edit_incidente_path(incidente) %></td>
+        <td><%= link_to 'Eliminar', incidente, method: :delete, data: { confirm: 'está seguro que desea elminar el registro?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Nuevo Incidente', new_incidente_path %>

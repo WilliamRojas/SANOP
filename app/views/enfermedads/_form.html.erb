@@ -1,0 +1,34 @@
+<%= form_for(@enfermedad) do |f| %>
+  <% if @enfermedad.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@enfermedad.errors.count, "error") %> prohibited this enfermedad from being saved:</h2>
+
+      <ul>
+      <% @enfermedad.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    funcionarios <br>
+    <%= f.collection_select :funcionario_id, Funcionario.all, :id, :nombres, class: "form-control", prompt:
+    "Seleccione Funcionario" %>
+  </div>
+  <div class="field">
+    <%= f.label :descripcion %><br>
+    <%= f.text_field :descripcion %>
+  </div>
+  <div class="field">
+    <%= f.label :fecha %><br>
+    <%= f.text_field :fecha %>
+  </div>
+  <div class="field">
+    <%= f.label :codigo_de_diagnostico %><br>
+    <%= f.text_field :codigodediagnostico %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Guardar" %>
+  </div>
+<% end %>

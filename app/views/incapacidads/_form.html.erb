@@ -1,0 +1,50 @@
+<%= form_for(@incapacidad) do |f| %>
+  <% if @incapacidad.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@incapacidad.errors.count, "error") %> prohibited this incapacidad from being saved:</h2>
+
+      <ul>
+      <% @incapacidad.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    funcionarios <br>
+    <%= f.collection_select :funcionario_id, Funcionario.all, :id, :nombres, class: "form-control", prompt:
+    "Seleccione Funcionario" %>
+  </div>
+  <div class="field">
+    <%= f.label :fecha_inicio %><br>
+    <%= f.date_select :fechainicio %>
+  </div>
+  <div class="field">
+    <%= f.label :fecha_terminacion %><br>
+    <%= f.date_select :fechaterminacion %>
+  </div>
+  <div class="field">
+    <%= f.label :total_dias %><br>
+    <%= f.text_field :totaldias %>
+  </div>
+  <div class="field">
+    <%= f.label :dias_a_cobrar %><br>
+    <%= f.text_field :diasacobrar %>
+  </div>
+  <div class="field">
+    <%= f.label :prorroga %><br>
+    <%= f.text_field :prorroga %>
+  </div>
+  <div class="field">
+    <%= f.label :numero_inpacacidad %><br>
+    <%= f.text_field :numeroinpacacidad %>
+  </div>
+  <div class="field">
+    <%= f.label :origen_de_la_incapacidad %><br>
+    <%= f.text_field :origendelaincapacidad %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Guardar"%>
+  </div>
+<% end %>
