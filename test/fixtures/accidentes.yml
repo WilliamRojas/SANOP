@@ -1,0 +1,105 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombre_: MyString
+  del_diligenciador: MyString
+  documento: MyString
+  tipodoc_id: 
+  tipo_de_vinculacion: MyString
+  razon_social: MyString
+  direccion_sede_principal: MyString
+  direccion_reportada: MyString
+  telefono_reportado: MyString
+  actividad_economica_sede_principal: MyString
+  codigo: MyString
+  telefono_sede_principal: MyString
+  fax_sede_principal: MyString
+  email_sede_principal: MyString
+  departamento_id: 
+  municipio_id: 
+  zona: MyString
+  actividad_economica_ct: MyString
+  direccion_ct: MyString
+  telefono_ct: MyString
+  fax_ct: MyString
+  email_ct: MyString
+  departamento_id: 
+  municipio_id: 
+  zona: MyString
+  funcionario_id: 
+  fecha_del_accidente: 2014-08-06
+  hora_del_accidente: MyString
+  dia_de_la_semana: MyString
+  jornada_en_que_sucede: MyString
+  realiza_su_labor: false
+  ocupacion_no_habitual: MyString
+  tiempo_laborado: MyString
+  lugar_donde_ocurrio_el_at: MyString
+  mecanismo_o_formato_del_at: MyString
+  tipo_de_lesion: MyString
+  sitio: MyString
+  tipo_de_accidente: false
+  parte_del_cuerpo_afectado: MyString
+  agente_del_accidente: MyString
+  departamento_id: 
+  municipio_id: 
+  zona_at: MyString
+  mortal: false
+  fecha_mortal: MyString
+  descripcion_del_at: MyString
+  hubo_personas_que_presenciaron_el_accidente: false
+  responsable_del_informe: MyString
+  tipodoc_id: 
+  documento: MyString
+
+two:
+  nombre_: MyString
+  del_diligenciador: MyString
+  documento: MyString
+  tipodoc_id: 
+  tipo_de_vinculacion: MyString
+  razon_social: MyString
+  direccion_sede_principal: MyString
+  direccion_reportada: MyString
+  telefono_reportado: MyString
+  actividad_economica_sede_principal: MyString
+  codigo: MyString
+  telefono_sede_principal: MyString
+  fax_sede_principal: MyString
+  email_sede_principal: MyString
+  departamento_id: 
+  municipio_id: 
+  zona: MyString
+  actividad_economica_ct: MyString
+  direccion_ct: MyString
+  telefono_ct: MyString
+  fax_ct: MyString
+  email_ct: MyString
+  departamento_id: 
+  municipio_id: 
+  zona: MyString
+  funcionario_id: 
+  fecha_del_accidente: 2014-08-06
+  hora_del_accidente: MyString
+  dia_de_la_semana: MyString
+  jornada_en_que_sucede: MyString
+  realiza_su_labor: false
+  ocupacion_no_habitual: MyString
+  tiempo_laborado: MyString
+  lugar_donde_ocurrio_el_at: MyString
+  mecanismo_o_formato_del_at: MyString
+  tipo_de_lesion: MyString
+  sitio: MyString
+  tipo_de_accidente: false
+  parte_del_cuerpo_afectado: MyString
+  agente_del_accidente: MyString
+  departamento_id: 
+  municipio_id: 
+  zona_at: MyString
+  mortal: false
+  fecha_mortal: MyString
+  descripcion_del_at: MyString
+  hubo_personas_que_presenciaron_el_accidente: false
+  responsable_del_informe: MyString
+  tipodoc_id: 
+  documento: MyString

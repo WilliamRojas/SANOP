@@ -11,7 +11,60 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140618162833) do
+ActiveRecord::Schema.define(version: 20140806162137) do
+
+  create_table "accidentes", force: true do |t|
+    t.string   "nombre_"
+    t.string   "del_diligenciador"
+    t.string   "documento"
+    t.integer  "tipodoc_id"
+    t.string   "tipo_de_vinculacion"
+    t.string   "razon_social"
+    t.string   "direccion_sede_principal"
+    t.string   "direccion_reportada"
+    t.string   "telefono_reportado"
+    t.string   "actividad_economica_sede_principal"
+    t.string   "codigo"
+    t.string   "telefono_sede_principal"
+    t.string   "fax_sede_principal"
+    t.string   "email_sede_principal"
+    t.integer  "departamento_id"
+    t.integer  "municipio_id"
+    t.string   "zona"
+    t.string   "actividad_economica_ct"
+    t.string   "direccion_ct"
+    t.string   "telefono_ct"
+    t.string   "fax_ct"
+    t.string   "email_ct"
+    t.integer  "funcionario_id"
+    t.date     "fecha_del_accidente"
+    t.string   "hora_del_accidente"
+    t.string   "dia_de_la_semana"
+    t.string   "jornada_en_que_sucede"
+    t.boolean  "realiza_su_labor"
+    t.string   "ocupacion_no_habitual"
+    t.string   "tiempo_laborado"
+    t.string   "lugar_donde_ocurrio_el_at"
+    t.string   "mecanismo_o_formato_del_at"
+    t.string   "tipo_de_lesion"
+    t.string   "sitio"
+    t.boolean  "tipo_de_accidente"
+    t.string   "parte_del_cuerpo_afectado"
+    t.string   "agente_del_accidente"
+    t.string   "zona_at"
+    t.boolean  "mortal"
+    t.string   "fecha_mortal"
+    t.string   "descripcion_del_at"
+    t.boolean  "hubo_personas_que_presenciaron_el_accidente"
+    t.string   "responsable_del_informe"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "accidentes", ["departamento_id"], name: "index_accidentes_on_departamento_id"
+  add_index "accidentes", ["funcionario_id"], name: "index_accidentes_on_funcionario_id"
+  add_index "accidentes", ["municipio_id"], name: "index_accidentes_on_municipio_id"
+  add_index "accidentes", ["tipodoc_id"], name: "index_accidentes_on_tipodoc_id"
 
   create_table "centros", force: true do |t|
     t.string   "nombre"
