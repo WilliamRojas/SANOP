@@ -17,8 +17,7 @@
 #menu1{
 	padding-left:0px; 
 	margin-left: 0px;
-	margin-top: 15px; 
-
+	margin-top: 15px;
 }
 
 #menu1 li{
@@ -30,25 +29,22 @@ float:left;
 display:block; 
 width:150px;
 height:20px; 
-
- border-collapse: separate;
-  border-spacing: 5px;
- background:  url("gradient.gif") bottom left repeat-x;
- color: #F5DEB3;
- border:double;
+border-collapse: separate;
+border-spacing: 5px;
+background:  url("gradient.gif") bottom left repeat-x;
+border:solid;
 padding:0px;
 text-decoration:none;
 text-align:center; 
-color:#fff;
+color:#0de;
 font-family:arial; 
 font-size:15px;
 font-weight:bold;
 }
 
 #menu1 li a:hover{
-background:#F5DEB3;
-border-color:#FFFFFF;
-color:#000000;
+background:#DFE;
+color:#0de;
 }
 
 #menu1 li ul{

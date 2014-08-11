@@ -11,7 +11,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20140806162137) do
 
   create_table "accidentes", force: true do |t|
@@ -66,9 +65,6 @@ ActiveRecord::Schema.define(version: 20140806162137) do
   add_index "accidentes", ["funcionario_id"], name: "index_accidentes_on_funcionario_id"
   add_index "accidentes", ["municipio_id"], name: "index_accidentes_on_municipio_id"
   add_index "accidentes", ["tipodoc_id"], name: "index_accidentes_on_tipodoc_id"
-=======
-ActiveRecord::Schema.define(version: 20140806162120) do
->>>>>>> 99df087a9ce0b294102cca2d3a64d4ab891bb78d
 
   create_table "centros", force: true do |t|
     t.string   "nombre"
