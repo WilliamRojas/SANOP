@@ -11,6 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20140806162137) do
 
   create_table "accidentes", force: true do |t|
@@ -65,6 +66,9 @@ ActiveRecord::Schema.define(version: 20140806162137) do
   add_index "accidentes", ["funcionario_id"], name: "index_accidentes_on_funcionario_id"
   add_index "accidentes", ["municipio_id"], name: "index_accidentes_on_municipio_id"
   add_index "accidentes", ["tipodoc_id"], name: "index_accidentes_on_tipodoc_id"
+=======
+ActiveRecord::Schema.define(version: 20140806162120) do
+>>>>>>> 99df087a9ce0b294102cca2d3a64d4ab891bb78d
 
   create_table "centros", force: true do |t|
     t.string   "nombre"
@@ -73,6 +77,9 @@ ActiveRecord::Schema.define(version: 20140806162137) do
   end
 
   create_table "enfermedads", force: true do |t|
+    t.integer  "centro_id"
+    t.integer  "tipodoc_id"
+    t.string   "documento"
     t.integer  "funcionario_id"
     t.string   "codigodediagnostico"
     t.datetime "created_at"
@@ -80,6 +87,10 @@ ActiveRecord::Schema.define(version: 20140806162137) do
     t.string   "descripcion"
     t.date     "fecha"
   end
+
+  add_index "enfermedads", ["centro_id"], name: "index_enfermedads_on_centro_id"
+  add_index "enfermedads", ["funcionario_id"], name: "index_enfermedads_on_funcionario_id"
+  add_index "enfermedads", ["tipodoc_id"], name: "index_enfermedads_on_tipodoc_id"
 
   create_table "funcionarios", force: true do |t|
     t.string   "nombres"
@@ -118,10 +129,13 @@ ActiveRecord::Schema.define(version: 20140806162137) do
     t.string   "diasacobrar"
     t.string   "prorroga"
     t.string   "numeroinpacacidad"
+    t.string   "esp"
     t.string   "origendelaincapacidad"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "incapacidads", ["funcionario_id"], name: "index_incapacidads_on_funcionario_id"
 
   create_table "incidentes", force: true do |t|
     t.integer  "centro_id"
@@ -185,6 +199,12 @@ ActiveRecord::Schema.define(version: 20140806162137) do
   end
 
   add_index "riesgos", ["funcionario_id"], name: "index_riesgos_on_funcionario_id"
+
+  create_table "tipo_salidas", force: true do |t|
+    t.string   "nombre"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "tipodocs", force: true do |t|
     t.string   "nombre"
