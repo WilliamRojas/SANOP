@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
 
-<<<<<<< HEAD
+
   resources :accidentes
 
   resources :tipo_salidas
-=======
+
   get 'user_sessions/new'
 
   get 'user_sessions/create'
@@ -12,9 +12,9 @@ Rails.application.routes.draw do
   get 'user_sessions/destroy'
 
   resources :users
->>>>>>> b90ad4c9068a55b33135a06f665827c7653dca68
 
-  match '/home', to: 'static_pages#home',  via: 'get' 
+
+  match '/home', to: 'static_pages#home', via: 'get' 
   match '/help',to: 'static_pages#help',  via: 'get' 
   match '/about',   to: 'static_pages#about',  via: 'get' 
   match '/contact', to: 'static_pages#contact',  via: 'get' 
