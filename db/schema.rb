@@ -11,6 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20140806162137) do
 
   create_table "accidentes", force: true do |t|
@@ -65,6 +66,9 @@ ActiveRecord::Schema.define(version: 20140806162137) do
   add_index "accidentes", ["funcionario_id"], name: "index_accidentes_on_funcionario_id"
   add_index "accidentes", ["municipio_id"], name: "index_accidentes_on_municipio_id"
   add_index "accidentes", ["tipodoc_id"], name: "index_accidentes_on_tipodoc_id"
+=======
+ActiveRecord::Schema.define(version: 20140811162332) do
+>>>>>>> b90ad4c9068a55b33135a06f665827c7653dca68
 
   create_table "centros", force: true do |t|
     t.string   "nombre"
@@ -213,5 +217,15 @@ ActiveRecord::Schema.define(version: 20140806162137) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "users", force: true do |t|
+    t.string   "email",            null: false
+    t.string   "crypted_password", null: false
+    t.string   "salt",             null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "users", ["email"], name: "index_users_on_email", unique: true
 
 end

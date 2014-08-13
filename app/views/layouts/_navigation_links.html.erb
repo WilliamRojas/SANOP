@@ -1,7 +1,12 @@
 <%# add navigation links to this file %>
  <ul id="menu1">
+<<<<<<< HEAD
     <li><%= link_to "Inicio", home_path %></li>
 
+=======
+    <li><a>Inicio</a></li>
+     
+>>>>>>> b90ad4c9068a55b33135a06f665827c7653dca68
      <li><%= link_to "Funcionarios", funcionarios_path %> </li>
 
     <li><%= link_to "Novedad" %>
@@ -20,4 +25,15 @@
     <li><%= link_to "Estadisticas" %></li>
     <li><%= link_to "Seguridad" %></li> 
     <li><%= link_to "Ayuda" %></li> 
+
+    <% if current_user %> 
+      <%= link_to "Editar Perfil", edit_user_path(current_user.id) %> 
+      <%= link_to "Salir", :logout, method: :get %> 
+ <% else %> 
+      <%= link_to "Registrarse", new_user_path %> | 
+      <%= link_to "Login", :login %> 
+<% end %>
+
  </ul>
+
+ 
