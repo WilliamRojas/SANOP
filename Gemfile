@@ -40,17 +40,17 @@ gem 'spring',        group: :development
 
 gem 'will_paginate'
  
+
+gem 'sorcery' #gema de login
+
 gem 'bootstrap-sass'
-gem 'sorcery'
-
-
 group :development do 
 gem 'better_errors' 
-gem 'binding_of_caller' #, :platforms=>[:mri_19, :mri_20, :rbx] 
+gem 'binding_of_caller' , :platforms=>[:mri_19, :mri_20, :rbx] 
 gem 'quiet_assets' 
 gem 'rails_layout' 
-
-gem 'bootstrap-sass'
-gem 'sorcery'
-
 end
+
+
+gem 'lazybox' #gema de bootsrap
+
