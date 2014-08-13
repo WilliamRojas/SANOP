@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
 
+  get 'user_sessions/new'
+
+  get 'user_sessions/create'
+
+  get 'user_sessions/destroy'
+
+  resources :users
+
   match '/home', to: 'static_pages#home',  via: 'get' 
   match '/help',to: 'static_pages#help',  via: 'get' 
   match '/about',   to: 'static_pages#about',  via: 'get' 
@@ -14,6 +22,10 @@ Rails.application.routes.draw do
   get 'static_pages/contact'
 
   get 'static_pages/about'
+
+  get 'login' => 'user_sessions#new', :as => :login 
+  
+  get 'logout' => 'user_sessions#destroy', :as => :logout 
 
   resources :incidentes
 
@@ -34,6 +46,10 @@ Rails.application.routes.draw do
   resources :centros
 
   resources :logueos
+
+  resources :user_sessions
+
+  resources :users 
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
