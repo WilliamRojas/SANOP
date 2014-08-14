@@ -24,8 +24,9 @@
     <%= f.text_field :documento %>
   </div>
   <div class="field">
-    <%= f.label :tipodoc_id %><br>
-    <%= f.text_field :tipodoc_id %>
+    Tipo de documento <br>
+    <%= f.collection_select :tipodoc_id, Tipodoc.all, :id, :nombre, class: "form-control", prompt:
+    "Seleccione" %>
   </div>
   <div class="field">
     <%= f.label :tipo_de_vinculacion %><br>
@@ -68,12 +69,14 @@
     <%= f.text_field :email_sede_principal %>
   </div>
   <div class="field">
-    <%= f.label :departamento_id %><br>
-    <%= f.text_field :departamento_id %>
+    Departamento <br>
+    <%= f.collection_select :departamento_id, Departamento.all, :id, :nombre, class: "form-control", prompt:
+    "Seleccione" %>
   </div>
   <div class="field">
-    <%= f.label :municipio_id %><br>
-    <%= f.text_field :municipio_id %>
+    Municipio <br>
+    <%= f.collection_select :municipio_id, Municipio.all, :id, :nombre, class: "form-control", prompt:
+    "Seleccione" %>
   </div>
   <div class="field">
     <%= f.label :zona %><br>
@@ -100,12 +103,14 @@
     <%= f.text_field :email_ct %>
   </div>
   <div class="field">
-    <%= f.label :departamento_id %><br>
-    <%= f.text_field :departamento_id %>
+    Departamento <br>
+    <%= f.collection_select :departamento_id, Departamento.all, :id, :nombre, class: "form-control", prompt:
+    "Seleccione" %>
   </div>
   <div class="field">
-    <%= f.label :municipio_id %><br>
-    <%= f.text_field :municipio_id %>
+    Municipio <br>
+    <%= f.collection_select :municipio_id, Municipio.all, :id, :nombre, class: "form-control", prompt:
+    "Seleccione" %>
   </div>
   <div class="field">
     <%= f.label :zona %><br>
@@ -172,12 +177,14 @@
     <%= f.text_field :agente_del_accidente %>
   </div>
   <div class="field">
-    <%= f.label :departamento_id %><br>
-    <%= f.text_field :departamento_id %>
+    Departamento <br>
+    <%= f.collection_select :departamento_id, Departamento.all, :id, :nombre, class: "form-control", prompt:
+    "Seleccione" %>
   </div>
   <div class="field">
-    <%= f.label :municipio_id %><br>
-    <%= f.text_field :municipio_id %>
+    Municipio <br>
+    <%= f.collection_select :municipio_id, Municipio.all, :id, :nombre, class: "form-control", prompt:
+    "Seleccione" %>
   </div>
   <div class="field">
     <%= f.label :zona_at %><br>
@@ -204,8 +211,9 @@
     <%= f.text_field :responsable_del_informe %>
   </div>
   <div class="field">
-    <%= f.label :tipodoc_id %><br>
-    <%= f.text_field :tipodoc_id %>
+    Tipo de documento <br>
+    <%= f.collection_select :tipodoc_id, Tipodoc.all, :id, :nombre, class: "form-control", prompt:
+    "Seleccione" %>
   </div>
   <div class="field">
     <%= f.label :documento %><br>

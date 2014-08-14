@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140811162332) do
+ActiveRecord::Schema.define(version: 20140813230336) do
 
   create_table "accidentes", force: true do |t|
     t.string   "nombre_"
@@ -67,6 +67,12 @@ ActiveRecord::Schema.define(version: 20140811162332) do
   add_index "accidentes", ["tipodoc_id"], name: "index_accidentes_on_tipodoc_id"
 
   create_table "centros", force: true do |t|
+    t.string   "nombre"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "departamentos", force: true do |t|
     t.string   "nombre"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -163,6 +169,12 @@ ActiveRecord::Schema.define(version: 20140811162332) do
   create_table "logueos", force: true do |t|
     t.string   "usuario"
     t.string   "clave"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "municipios", force: true do |t|
+    t.string   "nombre"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

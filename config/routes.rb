@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
 
 
+  resources :departamentos
+
+  resources :municipios
+
   resources :accidentes
 
   resources :tipo_salidas
