@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombre_diligenciador: MyString
+  tipodoc_id: 
+  documento: MyString
+  nombre_afectado: MyString
+  tipodoc_id: 1
+  documento: MyString
+
+two:
+  nombre_diligenciador: MyString
+  tipodoc_id: 
+  documento: MyString
+  nombre_afectado: MyString
+  tipodoc_id: 1
+  documento: MyString

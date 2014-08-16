@@ -1,8 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  nombre_: MyString
-  del_diligenciador: MyString
+  nombre_del_diligenciador: MyString
   documento: MyString
   tipodoc_id: 
   tipo_de_vinculacion: MyString
@@ -11,23 +10,23 @@ one:
   direccion_reportada: MyString
   telefono_reportado: MyString
   actividad_economica_sede_principal: MyString
-  codigo: MyString
+  codigo1: MyString
   telefono_sede_principal: MyString
   fax_sede_principal: MyString
   email_sede_principal: MyString
   departamento_id: 
   municipio_id: 
-  zona: MyString
-  actividad_economica_ct: MyString
-  direccion_ct: MyString
+  zona1: MyString
+  actividad_economica_centro_trabajo: MyString
+  direccion_centro_trabajo: MyString
   telefono_ct: MyString
   fax_ct: MyString
   email_ct: MyString
-  departamento_id: 
-  municipio_id: 
+  departamento2: 1
+  municipio2: 1
   zona: MyString
   funcionario_id: 
-  fecha_del_accidente: 2014-08-06
+  fecha_del_accidente: 2014-08-14
   hora_del_accidente: MyString
   dia_de_la_semana: MyString
   jornada_en_que_sucede: MyString
@@ -38,23 +37,28 @@ one:
   mecanismo_o_formato_del_at: MyString
   tipo_de_lesion: MyString
   sitio: MyString
-  tipo_de_accidente: false
+  tipo_de_accidente: MyString
   parte_del_cuerpo_afectado: MyString
   agente_del_accidente: MyString
-  departamento_id: 
-  municipio_id: 
-  zona_at: MyString
+  departamento3: 1
+  municipio3: 1
+  zona3: MyString
   mortal: false
-  fecha_mortal: MyString
+  fecha_mortal: 2014-08-14
   descripcion_del_at: MyString
   hubo_personas_que_presenciaron_el_accidente: false
-  responsable_del_informe: MyString
-  tipodoc_id: 
-  documento: MyString
+  testigo1: MyString
+  tipodoc2: 1
+  documento2: MyString
+  testigo2: MyString
+  tipodoc3: 1
+  documento3: MyString
+  responsable_informe: MyString
+  tipodoc4: 1
+  documento4: MyString
 
 two:
-  nombre_: MyString
-  del_diligenciador: MyString
+  nombre_del_diligenciador: MyString
   documento: MyString
   tipodoc_id: 
   tipo_de_vinculacion: MyString
@@ -63,23 +67,23 @@ two:
   direccion_reportada: MyString
   telefono_reportado: MyString
   actividad_economica_sede_principal: MyString
-  codigo: MyString
+  codigo1: MyString
   telefono_sede_principal: MyString
   fax_sede_principal: MyString
   email_sede_principal: MyString
   departamento_id: 
   municipio_id: 
-  zona: MyString
-  actividad_economica_ct: MyString
-  direccion_ct: MyString
+  zona1: MyString
+  actividad_economica_centro_trabajo: MyString
+  direccion_centro_trabajo: MyString
   telefono_ct: MyString
   fax_ct: MyString
   email_ct: MyString
-  departamento_id: 
-  municipio_id: 
+  departamento2: 1
+  municipio2: 1
   zona: MyString
   funcionario_id: 
-  fecha_del_accidente: 2014-08-06
+  fecha_del_accidente: 2014-08-14
   hora_del_accidente: MyString
   dia_de_la_semana: MyString
   jornada_en_que_sucede: MyString
@@ -90,16 +94,22 @@ two:
   mecanismo_o_formato_del_at: MyString
   tipo_de_lesion: MyString
   sitio: MyString
-  tipo_de_accidente: false
+  tipo_de_accidente: MyString
   parte_del_cuerpo_afectado: MyString
   agente_del_accidente: MyString
-  departamento_id: 
-  municipio_id: 
-  zona_at: MyString
+  departamento3: 1
+  municipio3: 1
+  zona3: MyString
   mortal: false
-  fecha_mortal: MyString
+  fecha_mortal: 2014-08-14
   descripcion_del_at: MyString
   hubo_personas_que_presenciaron_el_accidente: false
-  responsable_del_informe: MyString
-  tipodoc_id: 
-  documento: MyString
+  testigo1: MyString
+  tipodoc2: 1
+  documento2: MyString
+  testigo2: MyString
+  tipodoc3: 1
+  documento3: MyString
+  responsable_informe: MyString
+  tipodoc4: 1
+  documento4: MyString

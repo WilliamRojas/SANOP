@@ -1,12 +1,15 @@
-<h1>Listing accidentes</h1>
+<br><br><br><br><br><br>
+
+<h1>Lista accidentes</h1>
+
 <div class="formulario">
+
 <table>
   <thead>
     <tr>
-      <th>Nombre </th>
-      <th>Del diligenciador</th>
+      <th>Nombre del diligenciador</th>
       <th>Documento</th>
-      <th>Tipodoc</th>
+      <th>Tipo de Doc</th>
       <th>Tipo de vinculacion</th>
       <th>Razon social</th>
       <th>Direccion sede principal</th>
@@ -20,8 +23,8 @@
       <th>Departamento</th>
       <th>Municipio</th>
       <th>Zona</th>
-      <th>Actividad economica ct</th>
-      <th>Direccion ct</th>
+      <th>Actividad economica centro trabajo</th>
+      <th>Direccion centro trabajo</th>
       <th>Telefono ct</th>
       <th>Fax ct</th>
       <th>Email ct</th>
@@ -45,13 +48,19 @@
       <th>Agente del accidente</th>
       <th>Departamento</th>
       <th>Municipio</th>
-      <th>Zona at</th>
+      <th>Zona</th>
       <th>Mortal</th>
       <th>Fecha mortal</th>
       <th>Descripcion del at</th>
       <th>Hubo personas que presenciaron el accidente</th>
-      <th>Responsable del informe</th>
-      <th>Tipodoc</th>
+      <th>Testigo1</th>
+      <th>Tipo de Doc</th>
+      <th>Documento</th>
+      <th>Testigo2</th>
+      <th>Tipo de Doc</th>
+      <th>Documento</th>
+      <th>Responsable informe</th>
+      <th>Tipo de Doc</th>
       <th>Documento</th>
       <th colspan="3">Acciones</th>
     </tr>
@@ -60,8 +69,7 @@
   <tbody>
     <% @accidentes.each do |accidente| %>
       <tr>
-        <td><%= accidente.nombre_ %></td>
-        <td><%= accidente.del_diligenciador %></td>
+        <td><%= accidente.nombre_del_diligenciador %></td>
         <td><%= accidente.documento %></td>
         <td><%= accidente.tipodoc.nombre rescue nil %></td>
         <td><%= accidente.tipo_de_vinculacion %></td>
@@ -70,20 +78,20 @@
         <td><%= accidente.direccion_reportada %></td>
         <td><%= accidente.telefono_reportado %></td>
         <td><%= accidente.actividad_economica_sede_principal %></td>
-        <td><%= accidente.codigo %></td>
+        <td><%= accidente.codigo1 %></td>
         <td><%= accidente.telefono_sede_principal %></td>
         <td><%= accidente.fax_sede_principal %></td>
         <td><%= accidente.email_sede_principal %></td>
         <td><%= accidente.departamento.nombre rescue nil %></td>
         <td><%= accidente.municipio.nombre rescue nil %></td>
-        <td><%= accidente.zona %></td>
-        <td><%= accidente.actividad_economica_ct %></td>
-        <td><%= accidente.direccion_ct %></td>
+        <td><%= accidente.zona1 %></td>
+        <td><%= accidente.actividad_economica_centro_trabajo %></td>
+        <td><%= accidente.direccion_centro_trabajo %></td>
         <td><%= accidente.telefono_ct %></td>
         <td><%= accidente.fax_ct %></td>
         <td><%= accidente.email_ct %></td>
-        <td><%= accidente.departamento.nombre rescue nil %></td>
-        <td><%= accidente.municipio.nombre rescue nil %></td>
+        <td><%= mostrardep(accidente.departamento2) %></td>
+        <td><%= mostrarmun(accidente.municipio2) %></td>
         <td><%= accidente.zona %></td>
         <td><%= accidente.funcionario %></td>
         <td><%= accidente.fecha_del_accidente %></td>
@@ -100,25 +108,32 @@
         <td><%= accidente.tipo_de_accidente %></td>
         <td><%= accidente.parte_del_cuerpo_afectado %></td>
         <td><%= accidente.agente_del_accidente %></td>
-        <td><%= accidente.departamento.nombre rescue nil %></td>
-        <td><%= accidente.municipio.nombre rescue nil %></td>
-        <td><%= accidente.zona_at %></td>
+        <td><%= mostrardep(accidente.departamento3) %></td>
+        <td><%= mostrarmun(accidente.municipio3) %></td>
+        <td><%= accidente.zona3 %></td>
         <td><%= accidente.mortal %></td>
         <td><%= accidente.fecha_mortal %></td>
         <td><%= accidente.descripcion_del_at %></td>
         <td><%= accidente.hubo_personas_que_presenciaron_el_accidente %></td>
-        <td><%= accidente.responsable_del_informe %></td>
-        <td><%= accidente.tipodoc.nombre rescue nil %></td>
-        <td><%= accidente.documento %></td>
+        <td><%= accidente.testigo1 %></td>
+        <td><%= nombretipodoc(accidente.tipodoc2) %></td>
+        <td><%= accidente.documento2 %></td>
+        <td><%= accidente.testigo2 %></td>
+        <td><%= nombretipodoc(accidente.tipodoc3) %></td>
+        <td><%= accidente.documento3 %></td>
+        <td><%= accidente.responsable_informe %></td>
+        <td><%= nombretipodoc(accidente.tipodoc4) %></td>
+        <td><%= accidente.documento4 %></td>
         <td><%= link_to 'Ver', accidente %></td>
         <td><%= link_to 'Editar', edit_accidente_path(accidente) %></td>
-        <td><%= link_to 'Eliminar', accidente, method: :delete, data: { confirm: 'Seguro que lo quiere eliminar?' } %></td>
+        <td><%= link_to 'Eliminar', accidente, method: :delete, data: { confirm: 'Eliminará el registro?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-</div>
 
 <br>
+
+</div>
 
 <%= link_to 'Nuevo Accidente', new_accidente_path %>

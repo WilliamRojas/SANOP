@@ -1,0 +1,38 @@
+<br><br><br><br><br><br>
+<div class="formulario">
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre diligenciador:</strong>
+  <%= @accident.nombre_diligenciador %>
+</p>
+
+<p>
+  <strong>Tipodoc:</strong>
+  <%= @accident.tipodoc.nombre rescue nil %>
+</p>
+
+<p>
+  <strong>Documento:</strong>
+  <%= @accident.documento %>
+</p>
+
+<p>
+  <strong>Nombre afectado:</strong>
+  <%= @accident.nombre_afectado %>
+</p>
+
+<p>
+  <strong>Tipodoc:</strong>
+  <%= @accident.tipodoc_id %>
+</p>
+
+<p>
+  <strong>Documento:</strong>
+  <%= @accident.documento %>
+</p>
+
+<%= link_to 'Edit', edit_accident_path(@accident) %> |
+<%= link_to 'Back', accidents_path %>
+
+</div>

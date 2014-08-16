@@ -11,11 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140813230336) do
+ActiveRecord::Schema.define(version: 20140815042203) do
 
   create_table "accidentes", force: true do |t|
-    t.string   "nombre_"
-    t.string   "del_diligenciador"
+    t.string   "nombre_del_diligenciador"
     t.string   "documento"
     t.integer  "tipodoc_id"
     t.string   "tipo_de_vinculacion"
@@ -24,18 +23,21 @@ ActiveRecord::Schema.define(version: 20140813230336) do
     t.string   "direccion_reportada"
     t.string   "telefono_reportado"
     t.string   "actividad_economica_sede_principal"
-    t.string   "codigo"
+    t.string   "codigo1"
     t.string   "telefono_sede_principal"
     t.string   "fax_sede_principal"
     t.string   "email_sede_principal"
     t.integer  "departamento_id"
     t.integer  "municipio_id"
-    t.string   "zona"
-    t.string   "actividad_economica_ct"
-    t.string   "direccion_ct"
+    t.string   "zona1"
+    t.string   "actividad_economica_centro_trabajo"
+    t.string   "direccion_centro_trabajo"
     t.string   "telefono_ct"
     t.string   "fax_ct"
     t.string   "email_ct"
+    t.integer  "departamento2"
+    t.integer  "municipio2"
+    t.string   "zona"
     t.integer  "funcionario_id"
     t.date     "fecha_del_accidente"
     t.string   "hora_del_accidente"
@@ -48,15 +50,25 @@ ActiveRecord::Schema.define(version: 20140813230336) do
     t.string   "mecanismo_o_formato_del_at"
     t.string   "tipo_de_lesion"
     t.string   "sitio"
-    t.boolean  "tipo_de_accidente"
+    t.string   "tipo_de_accidente"
     t.string   "parte_del_cuerpo_afectado"
     t.string   "agente_del_accidente"
-    t.string   "zona_at"
+    t.integer  "departamento3"
+    t.integer  "municipio3"
+    t.string   "zona3"
     t.boolean  "mortal"
-    t.string   "fecha_mortal"
+    t.date     "fecha_mortal"
     t.string   "descripcion_del_at"
     t.boolean  "hubo_personas_que_presenciaron_el_accidente"
-    t.string   "responsable_del_informe"
+    t.string   "testigo1"
+    t.integer  "tipodoc2"
+    t.string   "documento2"
+    t.string   "testigo2"
+    t.integer  "tipodoc3"
+    t.string   "documento3"
+    t.string   "responsable_informe"
+    t.integer  "tipodoc4"
+    t.string   "documento4"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -65,6 +77,18 @@ ActiveRecord::Schema.define(version: 20140813230336) do
   add_index "accidentes", ["funcionario_id"], name: "index_accidentes_on_funcionario_id"
   add_index "accidentes", ["municipio_id"], name: "index_accidentes_on_municipio_id"
   add_index "accidentes", ["tipodoc_id"], name: "index_accidentes_on_tipodoc_id"
+
+  create_table "accidents", force: true do |t|
+    t.string   "nombre_diligenciador"
+    t.integer  "tipodoc_id"
+    t.string   "documento"
+    t.string   "nombre_afectado"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "tipodocafectedid"
+  end
+
+  add_index "accidents", ["tipodoc_id"], name: "index_accidents_on_tipodoc_id"
 
   create_table "centros", force: true do |t|
     t.string   "nombre"

@@ -1,0 +1,43 @@
+<%= form_for(@accident) do |f| %>
+  <% if @accident.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@accident.errors.count, "error") %> prohibited this accident from being saved:</h2>
+
+      <ul>
+      <% @accident.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nombre_diligenciador %><br>
+    <%= f.text_field :nombre_diligenciador %>
+  </div>
+  <div class="field">
+    Tipo de documento <br>
+    <%= f.collection_select :tipodoc_id, Tipodoc.all, :id, :nombre, class: "form-control", prompt:
+    "Seleccione" %>
+  </div>
+  <div class="field">
+    <%= f.label :documento %><br>
+    <%= f.text_field :documento %>
+  </div>
+  <div class="field">
+    <%= f.label :nombre_afectado %><br>
+    <%= f.text_field :nombre_afectado %>
+  </div>
+  <div class="field">
+    Tipo de documento <br>
+    <%= f.collection_select :tipodocafectedid, Tipodoc.all, :id, :nombre, class: "form-control", prompt:
+    "Seleccione" %>
+  </div>
+  <div class="field">
+    <%= f.label :documento %><br>
+    <%= f.text_field :documento %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

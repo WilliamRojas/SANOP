@@ -1,11 +1,13 @@
 Rails.application.routes.draw do
 
 
+  resources :accidentes
+
+  resources :accidents
+
   resources :departamentos
 
   resources :municipios
-
-  resources :accidentes
 
   resources :tipo_salidas
 

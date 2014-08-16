@@ -1,16 +1,12 @@
-<div class="formulario">
+<br><br><br><br><br><br>
 
+<div class="formulario">
 
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Nombre :</strong>
-  <%= @accidente.nombre_ %>
-</p>
-
-<p>
-  <strong>Del diligenciador:</strong>
-  <%= @accidente.del_diligenciador %>
+  <strong>Nombre del diligenciador:</strong>
+  <%= @accidente.nombre_del_diligenciador %>
 </p>
 
 <p>
@@ -19,8 +15,8 @@
 </p>
 
 <p>
-  <strong>Tipodoc:</strong>
-  <%= @accidente.tipodoc.nombre %>
+  <strong>Tipo de Doc:</strong>
+  <%= @accidente.tipodoc.nombre rescue nil %>
 </p>
 
 <p>
@@ -55,7 +51,7 @@
 
 <p>
   <strong>Codigo:</strong>
-  <%= @accidente.codigo %>
+  <%= @accidente.codigo1 %>
 </p>
 
 <p>
@@ -75,27 +71,27 @@
 
 <p>
   <strong>Departamento:</strong>
-  <%= @accidente.departamento.nombre %>
+  <%= @accidente.departamento.nombre rescue nil %>
 </p>
 
 <p>
   <strong>Municipio:</strong>
-  <%= @accidente.municipio.nombre %>
+  <%= @accidente.municipio.nombre rescue nil %>
 </p>
 
 <p>
-  <strong>Zona:</strong>
-  <%= @accidente.zona %>
+  <strong>Zona1:</strong>
+  <%= @accidente.zona1 %>
 </p>
 
 <p>
-  <strong>Actividad economica ct:</strong>
-  <%= @accidente.actividad_economica_ct %>
+  <strong>Actividad economica centro trabajo:</strong>
+  <%= @accidente.actividad_economica_centro_trabajo %>
 </p>
 
 <p>
-  <strong>Direccion ct:</strong>
-  <%= @accidente.direccion_ct %>
+  <strong>Direccion centro trabajo:</strong>
+  <%= @accidente.direccion_centro_trabajo %>
 </p>
 
 <p>
@@ -115,12 +111,12 @@
 
 <p>
   <strong>Departamento:</strong>
-  <%= @accidente.departamento.nombre %>
+  <%= mostrardep(@accidente.departamento2) %>
 </p>
 
 <p>
   <strong>Municipio:</strong>
-  <%= @accidente.municipio.nombre %>
+  <%= mostrarmun(@accidente.municipio2) %>
 </p>
 
 <p>
@@ -205,17 +201,17 @@
 
 <p>
   <strong>Departamento:</strong>
-  <%= @accidente.departamento.nombre %>
+  <%= mostrardep(@accidente.departamento3) %>
 </p>
 
 <p>
   <strong>Municipio:</strong>
-  <%= @accidente.municipio.nombre %>
+  <%= mostrarmun(@accidente.municipio3) %>
 </p>
 
 <p>
-  <strong>Zona at:</strong>
-  <%= @accidente.zona_at %>
+  <strong>Zona3:</strong>
+  <%= @accidente.zona3 %>
 </p>
 
 <p>
@@ -239,18 +235,48 @@
 </p>
 
 <p>
-  <strong>Responsable del informe:</strong>
-  <%= @accidente.responsable_del_informe %>
+  <strong>Testigo1:</strong>
+  <%= @accidente.testigo1 %>
 </p>
 
 <p>
-  <strong>Tipodoc:</strong>
-  <%= @accidente.tipodoc.nombre %>
+  <strong>Tipo Doc:</strong>
+  <%= nombretipodoc(@accidente.tipodoc2) %>
 </p>
 
 <p>
   <strong>Documento:</strong>
-  <%= @accidente.documento %>
+  <%= @accidente.documento2 %>
+</p>
+
+<p>
+  <strong>Testigo2:</strong>
+  <%= @accidente.testigo2 %>
+</p>
+
+<p>
+  <strong>Tipo Doc:</strong>
+  <%= nombretipodoc(@accidente.tipodoc3) %>
+</p>
+
+<p>
+  <strong>Documento:</strong>
+  <%= @accidente.documento3 %>
+</p>
+
+<p>
+  <strong>Responsable informe:</strong>
+  <%= @accidente.responsable_informe %>
+</p>
+
+<p>
+  <strong>Tipo Doc:</strong>
+  <%= nombretipodoc(@accidente.tipodoc4) %>
+</p>
+
+<p>
+  <strong>Documento4:</strong>
+  <%= @accidente.documento4 %>
 </p>
 
 </div>
