@@ -113,8 +113,9 @@
     <%= f.text_field :zona %>
   </div>
   <div class="field">
-    <%= f.label :funcionario_id %><br>
-    <%= f.text_field :funcionario_id %>
+    <%= f.label :funcionario %><br>
+    <%= f.collection_select :funcionario_id, Funcionario.all, :id, :nombres, class: "form-control", prompt:
+    "Seleccione" %>
   </div>
   <div class="field">
     <%= f.label :fecha_del_accidente %><br>

@@ -93,7 +93,7 @@
         <td><%= mostrardep(accidente.departamento2) %></td>
         <td><%= mostrarmun(accidente.municipio2) %></td>
         <td><%= accidente.zona %></td>
-        <td><%= accidente.funcionario %></td>
+        <td><%= accidente.funcionario.nombres rescue nil %></td>
         <td><%= accidente.fecha_del_accidente %></td>
         <td><%= accidente.hora_del_accidente %></td>
         <td><%= accidente.dia_de_la_semana %></td>
