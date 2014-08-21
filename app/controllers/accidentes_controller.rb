@@ -25,30 +25,16 @@ class AccidentesController < ApplicationController
   # POST /accidentes.json
   def create
     @accidente = Accidente.new(accidente_params)
-
-    respond_to do |format|
-      if @accidente.save
-        format.html { redirect_to @accidente, notice: 'Accidente was successfully created.' }
-        format.json { render :show, status: :created, location: @accidente }
-      else
-        format.html { render :new }
-        format.json { render json: @accidente.errors, status: :unprocessable_entity }
-      end
-    end
+    render action: :new unless @accidente.save
+        
+    
   end
 
   # PATCH/PUT /accidentes/1
   # PATCH/PUT /accidentes/1.json
   def update
-    respond_to do |format|
-      if @accidente.update(accidente_params)
-        format.html { redirect_to @accidente, notice: 'Accidente was successfully updated.' }
-        format.json { render :show, status: :ok, location: @accidente }
-      else
-        format.html { render :edit }
-        format.json { render json: @accidente.errors, status: :unprocessable_entity }
-      end
-    end
+   render action: :edit unless @accidente.update(accidente_params)
+        
   end
 
   # DELETE /accidentes/1

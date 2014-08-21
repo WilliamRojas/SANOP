@@ -1,4 +1,5 @@
-<%= form_for(@accidente) do |f| %>
+<%=   simple_form_for(@accidente, :html => { :class => 'form­horizontal', remote: true } ) do |f| %>
+
   <% if @accidente.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@accidente.errors.count, "error") %> prohibited this accidente from being saved:</h2>
@@ -11,238 +12,407 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form­-group">
     <%= f.label :nombre_del_diligenciador %><br>
     <%= f.text_field :nombre_del_diligenciador %>
   </div>
-  <div class="field">
-    <%= f.label :documento %><br>
-    <%= f.text_field :documento %>
+
+  <div class="form­group"> 
+    <label for="name" class="col­sm­3 control­label">Nombre_del_diligenciador</label> 
+    <div class="col­md­4"> 
+        <%= f.input_field :nombre_del_diligenciador, class: 'form­control' %> 
+    </div> 
+  </div> 
+
+  <div class="form­group"> 
+    <label for="name" class="col­sm­3 control­label">Documento</label> 
+    <div class="col­md­4"> 
+        <%= f.input_field :documento, class: 'form­control' %> 
+    </div> 
   </div>
-  <div class="field">
-    <%= f.label :tipo_de_documento %><br>
-    <%= f.collection_select :tipodoc_id, Tipodoc.all, :id, :nombre, class: "form-control", prompt:
-    "Seleccione" %>
+
+  <div class="form­group"> 
+    <label for="name" class="col­sm­3 control­label">Tipo_de_documento</label> 
+    <div class="col­md­4"> 
+        <%= f.input_field :tipodoc_id, class: 'form­control' %> 
+    </div> 
   </div>
-  <div class="field">
-    <%= f.label :tipo_de_vinculacion %><br>
-    <%= f.text_field :tipo_de_vinculacion %>
+
+  <div class="form­group"> 
+    <label for="name" class="col­sm­3 control­label">Tipo_de_vinculacion</label> 
+    <div class="col­md­4"> 
+        <%= f.input_field :tipo_de_vinculacion, class: 'form­control' %> 
+    </div> 
   </div>
-  <div class="field">
-    <%= f.label :razon_social %><br>
-    <%= f.text_field :razon_social %>
+
+  <div class="form­group"> 
+    <label for="name" class="col­sm­3 control­label">Raźon_social</label> 
+    <div class="col­md­4"> 
+        <%= f.input_field :razon_social, class: 'form­control' %> 
+    </div> 
   </div>
-  <div class="field">
-    <%= f.label :direccion_sede_principal %><br>
-    <%= f.text_field :direccion_sede_principal %>
+
+  <div class="form­group"> 
+    <label for="name" class="col­sm­3 control­label">Direccion_sede_principal</label> 
+    <div class="col­md­4"> 
+        <%= f.input_field :direccion_sede_principal, class: 'form­control' %> 
+    </div> 
   </div>
-  <div class="field">
-    <%= f.label :direccion_reportada %><br>
-    <%= f.text_field :direccion_reportada %>
+
+  <div class="form­group"> 
+    <label for="name" class="col­sm­3 control­label">Direccion_reportada</label> 
+    <div class="col­md­4"> 
+        <%= f.input_field :direccion_reportada, class: 'form­control' %> 
+    </div> 
   </div>
-  <div class="field">
-    <%= f.label :telefono_reportado %><br>
-    <%= f.text_field :telefono_reportado %>
+
+  <div class="form­group"> 
+    <label for="name" class="col­sm­3 control­label">Telefono_reportado</label> 
+    <div class="col­md­4"> 
+        <%= f.input_field :telefono_reportado, class: 'form­control' %> 
+    </div> 
   </div>
-  <div class="field">
-    <%= f.label :actividad_economica_sede_principal %><br>
-    <%= f.text_field :actividad_economica_sede_principal %>
+
+  <div class="form­group"> 
+    <label for="name" class="col­sm­3 control­label">Actividad_economica_sede_principal</label> 
+    <div class="col­md­4"> 
+        <%= f.input_field :actividad_economica_sede_principal, class: 'form­control' %> 
+    </div> 
   </div>
-  <div class="field">
-    <%= f.label :codigo %><br>
-    <%= f.text_field :codigo1 %>
+
+  <div class="form­group"> 
+    <label for="name" class="col­sm­3 control­label">Codigo</label> 
+    <div class="col­md­4"> 
+        <%= f.input_field :codigo1, class: 'form­control' %> 
+    </div> 
   </div>
-  <div class="field">
-    <%= f.label :telefono_sede_principal %><br>
-    <%= f.text_field :telefono_sede_principal %>
+
+  <div class="form­group"> 
+    <label for="name" class="col­sm­3 control­label">Telefono_sede_principal</label> 
+    <div class="col­md­4"> 
+        <%= f.input_field :telefono_sede_principal, class: 'form­control' %> 
+    </div> 
   </div>
-  <div class="field">
-    <%= f.label :fax_sede_principal %><br>
-    <%= f.text_field :fax_sede_principal %>
+
+  <div class="form­group"> 
+    <label for="name" class="col­sm­3 control­label">Fax_sede_principal</label> 
+    <div class="col­md­4"> 
+        <%= f.input_field :fax_sede_principal, class: 'form­control' %> 
+    </div> 
   </div>
-  <div class="field">
-    <%= f.label :email_sede_principal %><br>
-    <%= f.text_field :email_sede_principal %>
+
+  <div class="form­group"> 
+    <label for="name" class="col­sm­3 control­label">Email_sede_principal</label> 
+    <div class="col­md­4"> 
+        <%= f.input_field :email_sede_principal, class: 'form­control' %> 
+    </div> 
   </div>
-  <div class="field">
-    <%= f.label :departamento %><br>
-    <%= f.collection_select :departamento_id, Departamento.all, :id, :nombre, class: "form-control", prompt:
-    "Seleccione" %>
+
+  <div class="form­group"> 
+    <label for="name" class="col­sm­3 control­label">Departamento</label> 
+    <div class="col­md­4"> 
+        <%= f.input_field :departamento_id, class: 'form­control' %> 
+    </div> 
   </div>
-  <div class="field">
-    <%= f.label :municipio %><br>
-    <%= f.collection_select :municipio_id, Municipio.all, :id, :nombre, class: "form-control", prompt:
-    "Seleccione" %>
+
+  <div class="form­group"> 
+    <label for="name" class="col­sm­3 control­label">Municipio</label> 
+    <div class="col­md­4"> 
+        <%= f.input_field :municipio_id, class: 'form­control' %> 
+    </div> 
   </div>
-  <div class="field">
-    <%= f.label :zona %><br>
-    <%= f.text_field :zona1 %>
+
+  <div class="form­group"> 
+    <label for="name" class="col­sm­3 control­label">Zona</label> 
+    <div class="col­md­4"> 
+        <%= f.input_field :zona1, class: 'form­control' %> 
+    </div> 
   </div>
-  <div class="field">
-    <%= f.label :actividad_economica_centro_trabajo %><br>
-    <%= f.text_field :actividad_economica_centro_trabajo %>
+
+  <div class="form­group"> 
+    <label for="name" class="col­sm­3 control­label">Actividad_economica_centro_trabajo</label> 
+    <div class="col­md­4"> 
+        <%= f.input_field :actividad_economica_centro_trabajo, class: 'form­control' %> 
+    </div> 
   </div>
-  <div class="field">
-    <%= f.label :direccion_centro_trabajo %><br>
-    <%= f.text_field :direccion_centro_trabajo %>
+
+  <div class="form­group"> 
+    <label for="name" class="col­sm­3 control­label">Direccion_centro_trabajo</label> 
+    <div class="col­md­4"> 
+        <%= f.input_field :direccion_centro_trabajo, class: 'form­control' %> 
+    </div> 
   </div>
-  <div class="field">
-    <%= f.label :telefono_ct %><br>
-    <%= f.text_field :telefono_ct %>
+
+  <div class="form­group"> 
+    <label for="name" class="col­sm­3 control­label">Telefono_ct</label> 
+    <div class="col­md­4"> 
+        <%= f.input_field :telefono_ct, class: 'form­control' %> 
+    </div> 
   </div>
-  <div class="field">
-    <%= f.label :fax_ct %><br>
-    <%= f.text_field :fax_ct %>
+
+  <div class="form­group"> 
+    <label for="name" class="col­sm­3 control­label">Fax_ct</label> 
+    <div class="col­md­4"> 
+        <%= f.input_field :fax_ct, class: 'form­control' %> 
+    </div> 
   </div>
-  <div class="field">
-    <%= f.label :email_ct %><br>
-    <%= f.text_field :email_ct %>
+
+  <div class="form­group"> 
+    <label for="name" class="col­sm­3 control­label">Email_ct</label> 
+    <div class="col­md­4"> 
+        <%= f.input_field :email_ct, class: 'form­control' %> 
+    </div> 
   </div>
-  <div class="field">
-    <%= f.label :departamento %><br>
-    <%= f.collection_select :departamento2, Departamento.all, :id, :nombre, class: "form-control", prompt:
-    "Seleccione" %>
+
+  <div class="form­group"> 
+    <label for="name" class="col­sm­3 control­label">Departamento</label> 
+    <div class="col­md­4"> 
+        <%= f.input_field :departamento2, class: 'form­control' %> 
+    </div> 
   </div>
-  <div class="field">
-    <%= f.label :municipio %><br>
-    <%= f.collection_select :municipio2, Municipio.all, :id, :nombre, class: "form-control", prompt:
-    "Seleccione" %>
+
+  <div class="form­group"> 
+    <label for="name" class="col­sm­3 control­label">Municipio</label> 
+    <div class="col­md­4"> 
+        <%= f.input_field :municipio2, class: 'form­control' %> 
+    </div> 
   </div>
-  <div class="field">
-    <%= f.label :zona %><br>
-    <%= f.text_field :zona %>
+
+  <div class="form­group"> 
+    <label for="name" class="col­sm­3 control­label">Zona</label> 
+    <div class="col­md­4"> 
+        <%= f.input_field :zona, class: 'form­control' %> 
+    </div> 
   </div>
-  <div class="field">
-    <%= f.label :funcionario %><br>
-    <%= f.collection_select :funcionario_id, Funcionario.all, :id, :nombres, class: "form-control", prompt:
-    "Seleccione" %>
+
+  <div class="form­group"> 
+    <label for="name" class="col­sm­3 control­label">Funcionario</label> 
+    <div class="col­md­4"> 
+        <%= f.input_field :funcionario_id, class: 'form­control' %> 
+    </div> 
   </div>
-  <div class="field">
-    <%= f.label :fecha_del_accidente %><br>
-    <%= f.date_select :fecha_del_accidente %>
+
+  <div class="form­group"> 
+    <label for="name" class="col­sm­3 control­label">Fecha_del_accidente</label> 
+    <div class="col­md­4"> 
+        <%= f.input_field :fecha_del_accidente, class: 'form­control' %> 
+    </div> 
   </div>
-  <div class="field">
-    <%= f.label :hora_del_accidente %><br>
-    <%= f.text_field :hora_del_accidente %>
+
+  <div class="form­group"> 
+    <label for="name" class="col­sm­3 control­label">Hora_del_accidente</label> 
+    <div class="col­md­4"> 
+        <%= f.input_field :hora_del_accidente, class: 'form­control' %> 
+    </div> 
   </div>
-  <div class="field">
-    <%= f.label :dia_de_la_semana %><br>
-    <%= f.text_field :dia_de_la_semana %>
+
+  <div class="form­group"> 
+    <label for="name" class="col­sm­3 control­label">Dia_de_la_semana</label> 
+    <div class="col­md­4"> 
+        <%= f.input_field :dia_de_la_semana, class: 'form­control' %> 
+    </div> 
   </div>
-  <div class="field">
-    <%= f.label :jornada_en_que_sucede %><br>
-    <%= f.text_field :jornada_en_que_sucede %>
+
+  <div class="form­group"> 
+    <label for="name" class="col­sm­3 control­label">Jornada_en_que_sucede</label> 
+    <div class="col­md­4"> 
+        <%= f.input_field :jornada_en_que_sucede, class: 'form­control' %> 
+    </div> 
   </div>
-  <div class="field">
-    <%= f.label :realiza_su_labor %><br>
-    <%= f.check_box :realiza_su_labor %>
+
+  <div class="form­group"> 
+    <label for="name" class="col­sm­3 control­label">Realiza_su_labor</label> 
+    <div class="col­md­4"> 
+        <%= f.input_field :realiza_su_labor, class: 'form­control' %> 
+    </div> 
   </div>
-  <div class="field">
-    <%= f.label :ocupacion_no_habitual %><br>
-    <%= f.text_field :ocupacion_no_habitual %>
+
+  <div class="form­group"> 
+    <label for="name" class="col­sm­3 control­label">Ocupacion_no_habitual</label> 
+    <div class="col­md­4"> 
+        <%= f.input_field :ocupacion_no_habitual, class: 'form­control' %> 
+    </div> 
   </div>
-  <div class="field">
-    <%= f.label :tiempo_laborado %><br>
-    <%= f.text_field :tiempo_laborado %>
+
+  <div class="form­group"> 
+    <label for="name" class="col­sm­3 control­label">Tiempo_laborado</label> 
+    <div class="col­md­4"> 
+        <%= f.input_field :tiempo_laborado, class: 'form­control' %> 
+    </div> 
   </div>
-  <div class="field">
-    <%= f.label :lugar_donde_ocurrio_el_at %><br>
-    <%= f.text_field :lugar_donde_ocurrio_el_at %>
+
+  <div class="form­group"> 
+    <label for="name" class="col­sm­3 control­label">Lugar_donde_ocurrio_el_at</label> 
+    <div class="col­md­4"> 
+        <%= f.input_field :lugar_donde_ocurrio_el_at, class: 'form­control' %> 
+    </div> 
   </div>
-  <div class="field">
-    <%= f.label :mecanismo_o_formato_del_at %><br>
-    <%= f.text_field :mecanismo_o_formato_del_at %>
+
+  <div class="form­group"> 
+    <label for="name" class="col­sm­3 control­label">Mecanismo_o_formato_del_at</label> 
+    <div class="col­md­4"> 
+        <%= f.input_field :mecanismo_o_formato_del_at, class: 'form­control' %> 
+    </div> 
   </div>
-  <div class="field">
-    <%= f.label :tipo_de_lesion %><br>
-    <%= f.text_field :tipo_de_lesion %>
+
+  <div class="form­group"> 
+    <label for="name" class="col­sm­3 control­label">Tipo_de_lesion</label> 
+    <div class="col­md­4"> 
+        <%= f.input_field :tipo_de_lesion, class: 'form­control' %> 
+    </div> 
   </div>
-  <div class="field">
-    <%= f.label :sitio %><br>
-    <%= f.text_field :sitio %>
+
+  <div class="form­group"> 
+    <label for="name" class="col­sm­3 control­label">Sitio</label> 
+    <div class="col­md­4"> 
+        <%= f.input_field :sitio, class: 'form­control' %> 
+    </div> 
   </div>
-  <div class="field">
-    <%= f.label :tipo_de_accidente %><br>
-    <%= f.text_field :tipo_de_accidente %>
+
+  <div class="form­group"> 
+    <label for="name" class="col­sm­3 control­label">Tipo_de_accidente</label> 
+    <div class="col­md­4"> 
+        <%= f.input_field :tipo_de_accidente, class: 'form­control' %> 
+    </div> 
   </div>
-  <div class="field">
-    <%= f.label :parte_del_cuerpo_afectado %><br>
-    <%= f.text_field :parte_del_cuerpo_afectado %>
+
+  <div class="form­group"> 
+    <label for="name" class="col­sm­3 control­label">Parte_del_cuerpo_afectado</label> 
+    <div class="col­md­4"> 
+        <%= f.input_field :parte_del_cuerpo_afectado, class: 'form­control' %> 
+    </div> 
   </div>
-  <div class="field">
-    <%= f.label :agente_del_accidente %><br>
-    <%= f.text_field :agente_del_accidente %>
+
+  <div class="form­group"> 
+    <label for="name" class="col­sm­3 control­label">Agente_del_accidente</label> 
+    <div class="col­md­4"> 
+        <%= f.input_field :agente_del_accidente, class: 'form­control' %> 
+    </div> 
   </div>
-  <div class="field">
-    <%= f.label :departamento %><br>
-    <%= f.collection_select :departamento3, Departamento.all, :id, :nombre, class: "form-control", prompt:
-    "Seleccione" %>
+
+  <div class="form­group"> 
+    <label for="name" class="col­sm­3 control­label">Departamento</label> 
+    <div class="col­md­4"> 
+        <%= f.input_field :departamento3, class: 'form­control' %> 
+    </div> 
   </div>
-  <div class="field">
-    <%= f.label :municipio %><br>
-    <%= f.collection_select :municipio3, Municipio.all, :id, :nombre, class: "form-control", prompt:
-    "Seleccione" %>
+
+  <div class="form­group"> 
+    <label for="name" class="col­sm­3 control­label">Municipio</label> 
+    <div class="col­md­4"> 
+        <%= f.input_field :municipio3, class: 'form­control' %> 
+    </div> 
   </div>
-  <div class="field">
-    <%= f.label :zona %><br>
-    <%= f.text_field :zona3 %>
+
+  <div class="form­group"> 
+    <label for="name" class="col­sm­3 control­label">Zona</label> 
+    <div class="col­md­4"> 
+        <%= f.input_field :zona3, class: 'form­control' %> 
+    </div> 
   </div>
-  <div class="field">
-    <%= f.label :mortal %><br>
-    <%= f.check_box :mortal %>
+
+  <div class="form­group"> 
+    <label for="name" class="col­sm­3 control­label">Mortal</label> 
+    <div class="col­md­4"> 
+        <%= f.input_field :mortal, class: 'form­control' %> 
+    </div> 
   </div>
-  <div class="field">
-    <%= f.label :fecha_mortal %><br>
-    <%= f.date_select :fecha_mortal %>
+
+  <div class="form­group"> 
+    <label for="name" class="col­sm­3 control­label">Fecha_mortal</label> 
+    <div class="col­md­4"> 
+        <%= f.input_field :fecha_mortal, class: 'form­control' %> 
+    </div> 
   </div>
-  <div class="field">
-    <%= f.label :descripcion_del_at %><br>
-    <%= f.text_field :descripcion_del_at %>
+
+  <div class="form­group"> 
+    <label for="name" class="col­sm­3 control­label">Descripcion_del_at</label> 
+    <div class="col­md­4"> 
+        <%= f.input_field :descripcion_del_at, class: 'form­control' %> 
+    </div> 
   </div>
-  <div class="field">
-    <%= f.label :hubo_personas_que_presenciaron_el_accidente %><br>
-    <%= f.check_box :hubo_personas_que_presenciaron_el_accidente %>
+
+  <div class="form­group"> 
+    <label for="name" class="col­sm­3 control­label">Hubo_personas_que_presenciaron_el_accidente</label> 
+    <div class="col­md­4"> 
+        <%= f.input_field :hubo_personas_que_presenciaron_el_accidente, class: 'form­control' %> 
+    </div> 
   </div>
-  <div class="field">
-    <%= f.label :testigo_1 %><br>
-    <%= f.text_field :testigo1 %>
+
+  <div class="form­group"> 
+    <label for="name" class="col­sm­3 control­label">Tesigo1</label> 
+    <div class="col­md­4"> 
+        <%= f.input_field :testigo1, class: 'form­control' %> 
+    </div> 
   </div>
-  <div class="field">
-    <%= f.label :tipo_de_documento %><br>
-    <%= f.collection_select :tipodoc2, Tipodoc.all, :id, :nombre, class: "form-control", prompt:
-    "Seleccione" %>
+
+  <div class="form­group"> 
+    <label for="name" class="col­sm­3 control­label">Tipo_de_documento</label> 
+    <div class="col­md­4"> 
+        <%= f.input_field :tipodoc2, class: 'form­control' %> 
+    </div> 
   </div>
-  <div class="field">
-    <%= f.label :documento %><br>
-    <%= f.text_field :documento2 %>
+
+  <div class="form­group"> 
+    <label for="name" class="col­sm­3 control­label">Documento</label> 
+    <div class="col­md­4"> 
+        <%= f.input_field :documento2, class: 'form­control' %> 
+    </div> 
   </div>
-  <div class="field">
-    <%= f.label :testigo_2 %><br>
-    <%= f.text_field :testigo2 %>
+
+  <div class="form­group"> 
+    <label for="name" class="col­sm­3 control­label">Testigo2</label> 
+    <div class="col­md­4"> 
+        <%= f.input_field :testigo2, class: 'form­control' %> 
+    </div> 
   </div>
-  <div class="field">
-    <%= f.label :tipo_de_documento %><br>
-    <%= f.collection_select :tipodoc3, Tipodoc.all, :id, :nombre, class: "form-control", prompt:
-    "Seleccione" %>
+
+  <div class="form­group"> 
+    <label for="name" class="col­sm­3 control­label">Tipo_de_documento</label> 
+    <div class="col­md­4"> 
+        <%= f.input_field :tipodoc3, class: 'form­control' %> 
+    </div> 
   </div>
-  <div class="field">
+  <div class="form­-group">
     <%= f.label :documento %><br>
     <%= f.text_field :documento3 %>
   </div>
-  <div class="field">
-    <%= f.label :responsable_informe %><br>
-    <%= f.text_field :responsable_informe %>
+
+  <div class="form­group"> 
+    <label for="name" class="col­sm­3 control­label">Documento</label> 
+    <div class="col­md­4"> 
+        <%= f.input_field :documento3, class: 'form­control' %> 
+    </div> 
   </div>
-  <div class="field">
-    <%= f.label :tipo_de_documento %><br>
-    <%= f.collection_select :tipodoc4, Tipodoc.all, :id, :nombre, class: "form-control", prompt:
-    "Seleccione" %>
+
+  <div class="form­group"> 
+    <label for="name" class="col­sm­3 control­label">Responsable_del_informe</label> 
+    <div class="col­md­4"> 
+        <%= f.input_field :responsable_informe, class: 'form­control' %> 
+    </div> 
   </div>
-  <div class="field">
-    <%= f.label :documento %><br>
-    <%= f.text_field :documento4 %>
+
+   <div class="form­group"> 
+    <label for="name" class="col­sm­3 control­label">Tipo de ocumento</label> 
+    <div class="col­md­4"> 
+        <%= f.input_field :tipodoc4, class: 'form­control' %> 
+    </div> 
   </div>
-  <div class="actions">
-    <%= f.submit "Guardar" %>
+
+  <div class="form­group"> 
+    <label for="name" class="col­sm­3 control­label">Documento</label> 
+    <div class="col­md­4"> 
+        <%= f.input_field :documento4, class: 'form­control' %> 
+    </div> 
   </div>
+
+
+  <div class="form­group"> 
+    <div class="col­sm­offset­2 col­sm­10"> 
+      <%= f.submit "Guardar", class: "btn btn­sm btn­success" %> 
+    </div> 
+  </div> 
+
+
+
 <% end %>

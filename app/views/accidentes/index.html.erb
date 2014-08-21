@@ -66,74 +66,15 @@
     </tr>
   </thead>
 
-  <tbody>
-    <% @accidentes.each do |accidente| %>
-      <tr>
-        <td><%= accidente.nombre_del_diligenciador %></td>
-        <td><%= accidente.documento %></td>
-        <td><%= accidente.tipodoc.nombre rescue nil %></td>
-        <td><%= accidente.tipo_de_vinculacion %></td>
-        <td><%= accidente.razon_social %></td>
-        <td><%= accidente.direccion_sede_principal %></td>
-        <td><%= accidente.direccion_reportada %></td>
-        <td><%= accidente.telefono_reportado %></td>
-        <td><%= accidente.actividad_economica_sede_principal %></td>
-        <td><%= accidente.codigo1 %></td>
-        <td><%= accidente.telefono_sede_principal %></td>
-        <td><%= accidente.fax_sede_principal %></td>
-        <td><%= accidente.email_sede_principal %></td>
-        <td><%= accidente.departamento.nombre rescue nil %></td>
-        <td><%= accidente.municipio.nombre rescue nil %></td>
-        <td><%= accidente.zona1 %></td>
-        <td><%= accidente.actividad_economica_centro_trabajo %></td>
-        <td><%= accidente.direccion_centro_trabajo %></td>
-        <td><%= accidente.telefono_ct %></td>
-        <td><%= accidente.fax_ct %></td>
-        <td><%= accidente.email_ct %></td>
-        <td><%= mostrardep(accidente.departamento2) %></td>
-        <td><%= mostrarmun(accidente.municipio2) %></td>
-        <td><%= accidente.zona %></td>
-        <td><%= accidente.funcionario.nombres rescue nil %></td>
-        <td><%= accidente.fecha_del_accidente %></td>
-        <td><%= accidente.hora_del_accidente %></td>
-        <td><%= accidente.dia_de_la_semana %></td>
-        <td><%= accidente.jornada_en_que_sucede %></td>
-        <td><%= accidente.realiza_su_labor %></td>
-        <td><%= accidente.ocupacion_no_habitual %></td>
-        <td><%= accidente.tiempo_laborado %></td>
-        <td><%= accidente.lugar_donde_ocurrio_el_at %></td>
-        <td><%= accidente.mecanismo_o_formato_del_at %></td>
-        <td><%= accidente.tipo_de_lesion %></td>
-        <td><%= accidente.sitio %></td>
-        <td><%= accidente.tipo_de_accidente %></td>
-        <td><%= accidente.parte_del_cuerpo_afectado %></td>
-        <td><%= accidente.agente_del_accidente %></td>
-        <td><%= mostrardep(accidente.departamento3) %></td>
-        <td><%= mostrarmun(accidente.municipio3) %></td>
-        <td><%= accidente.zona3 %></td>
-        <td><%= accidente.mortal %></td>
-        <td><%= accidente.fecha_mortal %></td>
-        <td><%= accidente.descripcion_del_at %></td>
-        <td><%= accidente.hubo_personas_que_presenciaron_el_accidente %></td>
-        <td><%= accidente.testigo1 %></td>
-        <td><%= nombretipodoc(accidente.tipodoc2) %></td>
-        <td><%= accidente.documento2 %></td>
-        <td><%= accidente.testigo2 %></td>
-        <td><%= nombretipodoc(accidente.tipodoc3) %></td>
-        <td><%= accidente.documento3 %></td>
-        <td><%= accidente.responsable_informe %></td>
-        <td><%= nombretipodoc(accidente.tipodoc4) %></td>
-        <td><%= accidente.documento4 %></td>
-        <td><%= link_to 'Ver', accidente %></td>
-        <td><%= link_to 'Editar', edit_accidente_path(accidente) %></td>
-        <td><%= link_to 'Eliminar', accidente, method: :delete, data: { confirm: 'Eliminará el registro?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
+   <tbody>
+
+      <%= render @accidentes %> 
+
+   </tbody>
 </table>
 
 <br>
 
 </div>
 
-<%= link_to 'Nuevo Accidente', new_accidente_path %>
+<%= link_to 'Nuevo Accidente', new_accidente_path, remote: true %>
